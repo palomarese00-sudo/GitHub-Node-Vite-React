@@ -1,13 +1,12 @@
-import Contador from "./contador"; // Asegúrate de que el archivo se llame Contador.jsx
-import './App.css'
+import Tabla from "./Tabla";
 
 function App() {
   return (
-    <div className="App">
-      {/* Aquí es donde invocamos tu componente */}
-      <Contador />
+    <div>
+      <h1>Tabla de Personas</h1>
+      <Tabla />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
