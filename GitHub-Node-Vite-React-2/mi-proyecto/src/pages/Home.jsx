@@ -1,0 +1,64 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PerfilResumen from "../components/PerfilResumen";
+
+function Home() {
+  return (
+    <div style={{ padding: '100px', textAlign: 'center', fontFamily: 'Arial, sans-serif' }}>
+      <header style={{ marginBottom: '100px' }}>
+        <h1>Bienvenido a mi Portafolio Profesional</h1>
+        <p style={{ fontSize: '1.2rem', color: '#555' }}>
+          Explora mis proyectos de desarrollo de software y mi trayectoria académica.
+        </p>
+      </header>
+
+      <PerfilResumen />
+
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        gap: '20px', 
+        flexWrap: 'wrap',
+        marginTop: "40px"
+      }}>
+        <div style={cardStyle}>
+          <h3>¿Quién soy?</h3>
+          <p>Conoce más sobre mi formación en Informática y mis intereses en ciberseguridad.</p>
+          <Link to="/acerca" style={linkButtonStyle}>Ver Perfil</Link>
+        </div>
+
+        <div style={cardStyle}>
+          <h3>Proyectos</h3>
+          <p>Revisa la implementación de mis componentes y tablas de datos dinámicas.</p>
+          <Link to="/tablas" style={linkButtonStyle}>Ver Tablas</Link>
+        </div>
+      </div>
+
+      <footer style={{ marginTop: '50px', color: '#888', fontSize: '0.9rem' }}>
+        <p>© 2026 - Licenciatura en Informática | Mazatlán, Sinaloa</p>
+      </footer>
+    </div>
+  );
+}
+
+const cardStyle = {
+  border: '1px solid #ddd',
+  borderRadius: '10px',
+  padding: '20px',
+  width: '250px',
+  boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+  backgroundColor: '#fff'
+};
+
+const linkButtonStyle = {
+  display: 'inline-block',
+  marginTop: '10px',
+  padding: '10px 15px',
+  backgroundColor: '#a4ffa7',
+  color: 'black',
+  textDecoration: 'none',
+  borderRadius: '5px',
+  fontWeight: 'bold'
+};
+
+export default Home;
